@@ -1,8 +1,10 @@
 #pragma once
 
-#include "waypoint_manager_cpp/visibility_control.h"
+#include <string>
 
 #include <rclcpp/rclcpp.hpp>
+
+#include "waypoint_manager_cpp/visibility_control.h"
 
 namespace waypoint_manager_cpp
 {
@@ -13,6 +15,10 @@ public:
   explicit WaypointManagerCppComponent(const rclcpp::NodeOptions & options);
 
 private:
-
+  // Parameters
+  std::string waypoints_csv_;
+  bool loop_enable_{false};
+  std::int32_t loop_count_;
+  std::int32_t start_waypoint_id_;
 };
 }  // namespace waypoint_manager_cpp

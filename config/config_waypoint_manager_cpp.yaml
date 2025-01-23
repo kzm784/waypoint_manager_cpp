@@ -1,2 +1,6 @@
 waypoint_manager_cpp_node:
   ros__parameters:
+    waypoints_csv: ""
+    start_waypoint_id: 0
+    loop_enable: false
+    loop_count: 2
